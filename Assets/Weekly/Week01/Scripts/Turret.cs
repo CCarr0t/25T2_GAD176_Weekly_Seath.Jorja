@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
-{
-    //We want to rotate while we hold Q and E
 
-    void Update()
+    public class Turret : MonoBehaviour
     {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            //Rotate Left
-            transform.Rotate(0, -1, 0);
-        }
+        //We want to rotate while we hold Q and E
 
-        if (Input.GetKey(KeyCode.E))
+        void Update()
         {
-            //Rotate Right
-            transform.Rotate(0, 1, 0);
+            if (Input.GetKey(KeyCode.Q))
+            {
+                //Rotate Left
+                transform.Rotate(0, -1, 0);
+            }
+
+            if (Input.GetKey(KeyCode.E))
+            {
+                //Rotate Right
+                transform.Rotate(0, 1, 0);
+            }
         }
     }
-}
