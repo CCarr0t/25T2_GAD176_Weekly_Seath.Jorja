@@ -21,9 +21,20 @@ namespace ShootingRange
             }
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            //Check that we have collided with a GUN
+            if (other.GetComponent<ICollectable>() != null) 
+            {
+                //We HAVE hit a gun! Do the thing
+
+                other.GetComponent<ICollectable>().Collect();
+            }
+        }
+
         public void setHealth()
         {
-
+            
         }
     }
 }

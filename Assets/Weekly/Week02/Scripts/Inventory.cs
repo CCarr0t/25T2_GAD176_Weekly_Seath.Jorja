@@ -12,7 +12,7 @@ namespace ShootingRange
         //Can tell the gun to fire
         public void Fire()
         {
-            guns[0].DealDamage();
+            //guns[0].DealDamage();
         }
     }
 }
