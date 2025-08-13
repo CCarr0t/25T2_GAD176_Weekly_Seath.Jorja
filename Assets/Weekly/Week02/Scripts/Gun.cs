@@ -24,6 +24,11 @@ namespace ShootingRange
         {
             //Drop the gun
             Debug.Log("The gun has been dropped!" + gameObject.name);
+
+            //Set inactive and move outside game world
+            transform.position = Vector3.zero;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            gameObject.SetActive(false);
         }
 
         // Another way to collect the gun v
